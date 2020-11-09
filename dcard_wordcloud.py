@@ -18,7 +18,7 @@ def get_forum_trending_word(forum, start_date, end_date, unwanted_list):
                 time_expire = True
                 break
             if datetime.strptime(article["createdAt"].split("T")[0], "%Y-%m-%d") <= datetime.strptime(end_date, "%Y/%m/%d"):
-                print(article["createdAt"])
+                # print(article["createdAt"])
                 for topic in article["topics"]:
                     if topic not in unwanted_list:
                         all_topics.append(topic)
